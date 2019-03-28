@@ -1,0 +1,23 @@
+@model Login
+<h1>Login</h1>
+<br>
+<a href="/">Go Back</a>
+<br>
+
+<form asp-action="Enter" asp-controller="Home" method="post">
+        <div class="form-row">
+            <div class="form-group">
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label asp-for="Password">Password</label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+                <span asp-validation-for="Password"></span>
+        </div>
+        <input type="submit" value="Login">
+        
+    </form>
